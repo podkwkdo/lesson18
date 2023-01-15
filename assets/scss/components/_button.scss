@@ -1,0 +1,51 @@
+@use "../mixins" as *;
+@use "../presets" as *;
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 30px;
+}
+
+.link_go {
+  padding: 20px;
+
+  color: $color-primary;
+  border-width: 1px;
+  border-style: groove;
+  border-color: $color-light;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.212);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.135);
+
+  @include ul-min {
+    font-size: 2.4rem;
+  }
+  @include ul-xl {
+    font-size: 1.4rem;
+  }
+  @include ul-xl {
+    font-size: 1.3rem;
+  }
+  @include xl-md {
+    font-size: 1.2rem;
+  }
+  @include md-sm {
+    font-size: 1.1rem;
+  }
+  @include sm {
+    display: inline-block;
+
+    width: 200px;
+
+    font-size: 1rem;
+  }
+}
+.link_go:hover,
+.link_go:focus {
+  color: orange;
+  background-color: rgba(0, 0, 0, 0.329);
+  text-shadow: 0 0 15px orange;
+}

@@ -1,0 +1,155 @@
+@use "../mixins" as *;
+@use "../presets" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-main;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  z-index: -1;
+
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  min-height: 100vh;
+  margin: 0;
+
+  background-position: center;
+  background-size: cover;
+}
+
+.title {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 10%;
+
+  @include sm {
+    justify-content: center;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.title_name {
+  margin: 0;
+
+  transition: hover 0.5s;
+
+  color: $color-primary;
+  text-shadow: 0 0 15px rgb(255, 255, 255);
+
+  font-weight: 600;
+
+  @include ul-min {
+    font-size: 8rem;
+  }
+  @include ul-xl {
+    font-size: 7rem;
+  }
+  @include xl-lg {
+    font-size: 6rem;
+  }
+  @include lg-md {
+    font-size: 5rem;
+  }
+  @include md-sm {
+    font-size: 4rem;
+  }
+  @include sm {
+    font-size: 2.5rem;
+  }
+}
+
+.title_name:hover {
+  color: orange;
+  text-shadow: 0 0 50px orange;
+}
+
+.title_b {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  width: 50%;
+
+  @include sm {
+    width: 100%;
+  }
+}
+
+.title_box {
+  position: relative;
+
+  display: flex;
+
+  max-width: 500px;
+  height: auto;
+  padding: 0.5em 1em;
+
+  @include ul-min {
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    font-size: 2.2rem;
+  }
+  @include ul-xl {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  @include ul-xl {
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    font-size: 2.1rem;
+  }
+  @include xl-md {
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    font-size: 2rem;
+  }
+  @include md-sm {
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    font-size: 1.8rem;
+  }
+  @include sm {
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    font-size: 1.6rem;
+  }
+}
+
+.title_text_description {
+  height: auto;
+  padding: 10px;
+}

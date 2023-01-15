@@ -1,0 +1,55 @@
+@use "../mixins" as *;
+@use "../presets" as *;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  background: linear-gradient(to bottom, rgb(95, 94, 94), rgba(0, 0, 0, 0));
+}
+
+.navbar_list {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 0;
+
+  list-style: none;
+}
+.navbar_item {
+  position: relative;
+
+  margin: 10px;
+
+  color: $color-primary;
+  text-shadow: 0 0 20px rgb(255, 255, 255);
+
+  font-weight: 300;
+
+  @include ul-min {
+    font-size: 2rem;
+  }
+  @include ul-xl {
+    font-size: 1.8rem;
+  }
+  @include xl-md {
+    font-size: 1.7rem;
+  }
+  @include md-sm {
+    font-size: 1.6rem;
+  }
+  @include sm {
+    font-size: 1rem;
+  }
+}
+
+.navbar_item:hover,
+.navbar_item:focus {
+  color: orange;
+  text-shadow: 0 0 10px #000000;
+}
